@@ -1,0 +1,48 @@
+.App {
+  text-align: center;
+  width: 100%;
+  padding: 20px 0;
+}
+
+.boards-container {
+  display: flex;
+  justify-content: space-around;
+}
+
+.Todo {
+  background-color: #f4511e;
+}
+
+.In-Progress {
+  background-color: #ffa000;
+}
+
+.Completed {
+  background-color: #00897b;
+}
+
+.App .column {
+  width: 30%;
+}
+
+.droppable-col {
+  width: 100%;
+  padding: 10px 10px 0 10px;
+  /* background-color: rgb(196, 36, 36); */
+  border-radius: 7px;
+  display: flex;
+  flex-direction: column;
+}
+
+.item {
+  margin-bottom: 10px;
+  background-color: rgba(0, 0, 0, 0.144);
+  color: white;
+  border: 1px solid white;
+  padding: 5px;
+  border-radius: 7px;
+}
+
+.item.dragging {
+  background-color: coral;
+}
