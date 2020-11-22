@@ -53,21 +53,26 @@ function App(props) {
     props.todo_position(prevFunc());
   };
 
-  const addItem = () => {
+  const addItem = (e) => {
+    e.preventDefault();
     props.add_todo(props.text);
+    props.set_text("");
     // console.log(props);
   };
 
   return (
     <div className="App">
-      <div>
+      <form>
         <input
           type="text"
+          placeholder="Enter new todo"
           value={props.text}
           onChange={(e) => props.set_text(e.target.value)}
         />
-        <button onClick={addItem}>Add</button>
-      </div>
+        <button type="submit" onClick={addItem}>
+          Add
+        </button>
+      </form>
       <div className="boards-container">
         <DragDropContext onDragEnd={handleDragEnd}>
           {_.map(props.main, (data, key) => {

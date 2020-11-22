@@ -7,6 +7,7 @@
 .boards-container {
   display: flex;
   justify-content: space-around;
+  justify-content: center;
 }
 
 .Todo {
@@ -23,6 +24,7 @@
 
 .App .column {
   width: 30%;
+  margin: 20px;
 }
 
 .droppable-col {
