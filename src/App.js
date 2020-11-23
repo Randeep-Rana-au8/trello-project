@@ -57,7 +57,7 @@ function App(props) {
     e.preventDefault();
     props.add_todo(props.text);
     props.set_text("");
-    // console.log(props);
+    console.log(props);
   };
 
   return (
